@@ -1,7 +1,7 @@
-var width = 1920,
-    height = 1080;
+var width = window.innerWidth,
+    height = window.innerHeight;
 
-var n = 300, // number of particles
+var n = (width * height)/5000, // number of particles
     m = 12, // I am not sure what this variable is
     degrees = 180 / Math.PI;
 
