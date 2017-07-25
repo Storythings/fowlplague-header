@@ -28,8 +28,8 @@ var g = svg.selectAll("g")
 
 var head = g.append("svg:image")
     .attr("xlink:href", "fluparticle.svg")
-    .attr("width", 20)
-    .attr("height", 20);
+    .attr("width", function() { return 20 + Math.floor(Math.random() * 20); })
+    .attr("height", function() { return 20 + Math.floor(Math.random() * 20); });
 
 d3.timer(function () {
     for (var i = -1; ++i < n;) {
