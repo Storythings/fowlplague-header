@@ -27,7 +27,7 @@ var g = svg.selectAll("g")
     .enter().append("g");
 
 var head = g.append("svg:image")
-    .attr("xlink:href", "fluparticle.svg")
+    .attr("xlink:href", "virus.svg")
     .attr("width", function() { return 20 + Math.floor(Math.random() * 20); })
 
 d3.timer(function () {
@@ -55,6 +55,7 @@ d3.timer(function () {
             path[j][1] = (y += dy / speed * k1) + dx * k2;
             speed = Math.sqrt((dx = vx) * dx + (dy = vy) * dy);
         }
+
     }
 
     head.attr("transform", headTransform);
