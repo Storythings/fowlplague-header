@@ -1,8 +1,8 @@
 var width = window.innerWidth,
     height = window.innerHeight;
 
-var n = (width * height)/5000, // number of particles
-    m = 12, // I am not sure what this variable is
+var n = (width * height)/10000, // number of particles
+    m = 12, // I am not sure what this variable does
     degrees = 180 / Math.PI;
 
 var fluparticles = d3.range(n).map(function () {
@@ -28,8 +28,8 @@ var g = svg.selectAll("g")
 
 var head = g.append("svg:image")
     .attr("xlink:href", "fluparticle.svg")
-    .attr("width", 25)
-    .attr("height", 25);
+    .attr("width", 50)
+    .attr("height", 50);
 
 d3.timer(function () {
     for (var i = -1; ++i < n;) {
